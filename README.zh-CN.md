@@ -31,10 +31,15 @@ xHook 一直在稳定性和兼容性方面做着持续的优化。
 ## 编译
 
 * 下载 [Android NDK r16b](https://developer.android.com/ndk/downloads/revision_history.html)，设置 PATH 环境变量。（对 armeabi 的支持，从 r17 版本开始被移除了）
+```shell
+export PATH=$PATH:/Users/frank/android/ndk/android-ndk-r16b
+./build_libs.sh
+./install_libs.sh
+```
 
 * 编译和安装 native 库。
 
-```
+```shell
 ./build_libs.sh
 ./install_libs.sh
 ```
@@ -43,6 +48,10 @@ xHook 一直在稳定性和兼容性方面做着持续的优化。
 ## Demo
 
 ```
+打開 Android Studio 的 Tools 
+        > SDK Manager > Appearance & Behavior > System Settings 
+        > Android SDK > SDK Tools > Android SDK Command-line tools，接著選擇 Apply 按鈕。
+
 cd ./xhookwrapper/
 ./gradlew assembleDebug
 adb install ./app/build/outputs/apk/debug/app-debug.apk
